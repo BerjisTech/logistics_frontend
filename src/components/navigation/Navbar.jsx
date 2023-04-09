@@ -1,0 +1,73 @@
+import React from 'react'
+import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiUsers, FiHelpCircle } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+import "./Navbar.css"
+import NavBarSerction from './NavBarSection'
+
+const Navbar = () => {
+    return (
+        <nav className="min-vh-100 m-0 p-0 d-flex overflow-x-hidden border-end-1 navbar">
+            <div className="m-0 p-0 h-screen d-flex flex-column flex-nowrap sticky " id="navBarWrapper">
+                <header className="w-full border-bottom sticky bg-primary shadow">
+                    <a className="m-0 p-0 w-full h-full d-flex align-items-center justif-content-center" href="/">
+                        <div className="m-0 p-0 d-flex w-full h-full align-items-center justify-content-center">
+                            <div className="card bg-white p-1 rounded shadow-sm my-2">
+                                <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
+                            </div>
+                        </div>
+                    </a>
+                </header>
+                <div className="flex-fill d-flex flex-column overflow-y-auto overflow-x-hidden">
+                    <NavBarSerction listItems={[
+                        { name: "Home", route: "/dashboard", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Jobs", route: "/dashboard/findwork", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Job Management", route: "/dashboard/job/123", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Courses", route: "/dashboard/courses", icon: <FiShoppingCart className="app__sidebar-icon" /> },
+                        { name: "Terms", route: "/dashboard/kudoz", icon: <FiBookOpen className="app__sidebar-icon" /> },
+                        { name: "Blue Board", route: "/dashboard/blueboard", icon: <FiThumbsUp className="app__sidebar-icon" /> },
+                        { name: "ProZ*Pay", route: "/dashboard/kudoz", icon: <FiMessageCircle className="app__sidebar-icon" /> }
+                    ]}
+                        id={"sideBarNav"} />
+                    <NavBarSerction listItems={[
+                        { name: "Interpret", route: "/marketplace/interpreting", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Donate words", route: "/marketplace/donate", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Translate", route: "/marketplace/translate", icon: <FiShoppingCart className="app__sidebar-icon" /> },
+                        { name: "Subtitle", route: "/marketplace/subtitle", icon: <FiBookOpen className="app__sidebar-icon" /> },
+                    ]}
+                        sectionTitle="Marketplace"
+                        showMore={true}
+                    />
+                    <NavBarSerction listItems={[
+                        { name: "Forums", route: "/networking/forum", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Meetups", route: "/networking/meetups", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Mentoring", route: "/networking/mentoring", icon: <FiHelpCircle className="app__sidebar-icon" /> },
+                        { name: "Gatherings", route: "/networking/gatherings", icon: <FiUsers className="app__sidebar-icon" /> },
+                    ]}
+                        sectionTitle="Networking"
+                    />
+                    <NavBarSerction listItems={[
+                        { name: "Invoicing", route: "/tools/invoicing", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Widgets", route: "/tools/widgets", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "CafeTran", route: "/tools/cafetran", icon: <FiShoppingCart className="app__sidebar-icon" /> },
+                        { name: "Community Rates", route: "/tools/community-rates", icon: <FiBookOpen className="app__sidebar-icon" /> },
+                    ]}
+                        sectionTitle="Tools"
+                        showMore={true}
+                    />
+                </div>
+                <div>
+                    <ul className="navbar-nav d-flex flex-column w-full p-2 align-items-start justify-content-start border-top-1">
+                        <li className="nav-item w-full text-center">
+                            <Link to="/dashboard/settings" className="nav-link w-full d-flex align-items-center justify-content-start overflow-hidden">
+                                <FiSettings className="app__sidebar-icon me-2" />
+                                <p>Settings</p>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    )
+}
+
+export default Navbar

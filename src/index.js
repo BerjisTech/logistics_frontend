@@ -1,19 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@popperjs/core";
+import "bootstrap";
+
+// core UI
+import '@coreui/coreui/dist/css/coreui.min.css'
+
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
-import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter } from 'react-router-dom';
 
 axios.defaults.baseURL = 'http://localhost:3000';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
       <App />
-    </BrowserRouter>
   </React.StrictMode>
 );
 
