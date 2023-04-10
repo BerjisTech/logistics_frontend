@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SourceTargetSearch = () => {
+const SourceTargetSearch = ({width}) => {
     return (
-        <form className="rounded-4 shadow bg-white p-3 min-w-[50%]" action="/dashboard/search">
+        <form className="rounded-4 shadow bg-white p-3 min-w-[{width}]" action="/dashboard/search">
             <div className="d-flex align-items-center justify-content-center">
                 <select className="form-select flex-fill form-select-sm border-none focuse:outline-none focus:border-none" aria-label=".form-select-sm example">
                     <option defaultValue>Source</option>
