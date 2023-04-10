@@ -45,7 +45,7 @@ const Landing = () => {
       <div className="bg-[#F4F6FA] pb-[100px]">
         <div className="d-flex flex-column align-items-center justify-content-between">
           <Spacer spacing='[5, 0, 0, 0]' />
-          <SourceTargetSearch />
+          <SourceTargetSearch element_width={'10%'} />
           <Spacer spacing='[5, 0, 0, 0]' />
         </div>
       </div>

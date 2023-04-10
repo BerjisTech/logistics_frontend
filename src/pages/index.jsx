@@ -11,7 +11,6 @@ export { default as Teams } from './dashboard/teams/Teams'
 export { default as Team } from './dashboard/teams/Team'
 
 // Landing & user facing files
-export { default as LandingPage } from './home/LandingPage';
 export { default as Signup } from './auth/Signup';
 
 // Dashboard files

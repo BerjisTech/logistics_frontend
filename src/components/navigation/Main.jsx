@@ -10,7 +10,6 @@ import {
   , Wallet
   , Teams
   , Team
-  , LandingPage
   , Signup
   , Applications
   , Courses
@@ -40,7 +39,6 @@ const Main = () => {
     <Routes>
       {/* Add pages here */}
       {/* <Route path='/dashboard/...' element={<ComponentHere />} /> */}
-      <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/applications/*" element={<Applications />} />
       <Route path="/courses/*" element={<Courses />} />

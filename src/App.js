@@ -11,7 +11,7 @@ import { UserFacingFooter } from './components/general_ui_components/Footer'
 import LocalizationSelect from './components/navigation/LocalizationSelect'
 
 // Import pages
-import { Dashboard, LandingPage } from './pages'
+import { Dashboard, Landing } from './pages'
 
 const TwoSideBars = () => {
   return (
@@ -21,7 +21,7 @@ const TwoSideBars = () => {
       </div>
       <div className='col-sm-8 m-0 p-0'>
         <Main className='m-0 p-0'>
-          <LandingPage />
+          <Landing />
         </Main>
       </div>
       <div className='col-sm-2 min-h-screen col-xs-none border-start-1'></div>
