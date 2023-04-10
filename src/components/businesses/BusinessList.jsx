@@ -12,7 +12,7 @@ export const BusinessCard = ({ businesS_id }) => {
             <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href={`/hire/agency/${businesS_id}`} className="card-link">Hire</a>
-            <a href={`/business/${businesS_id}`} className="card-link">View Business Profile</a>
+            <a href={`/dashboard/business/${businesS_id}`} className="card-link">View Business Profile</a>
           </div>
           <div>
 

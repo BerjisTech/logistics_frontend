@@ -9,10 +9,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0D1117;
+  /*background-color: #0D1117;*/
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Import google open sans fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+  /* color: #353445; */
+  /* outline: 1px solid #000000; */
+}
+
+.row {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+
+.text-primary {
+  color: #186362 !important;
+}
+.bg-primary,
+.progress-bar {
+  background-color: #186362 !important;
+  border-color: #186362 !important;
+}
+.showMoreBox {
+  transition: all 2s ease;
+}
+.showMoreTrigger:hover > .showMoreBox {
+  display: flex !important;
+}
+.navbar .collapse {
+  visibility: visible !important;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

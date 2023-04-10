@@ -1,8 +1,12 @@
 import React from 'react'
-import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiUsers, FiHelpCircle } from 'react-icons/fi'
+import { FiSettings, FiHome, FiBookOpen, FiPieChart, FiUsers, FiHelpCircle, FiList, FiFolder } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import NavBarSerction from './NavBarSection'
+import { BiBookAdd, BiBuilding, BiWallet } from 'react-icons/bi'
+import { BsTruck } from 'react-icons/bs'
+import { AiOutlineContacts } from 'react-icons/ai'
+import { GoOrganization } from 'react-icons/go'
 
 const Navbar = () => {
     return (
@@ -20,22 +24,34 @@ const Navbar = () => {
                 <div className="flex-fill d-flex flex-column overflow-y-auto overflow-x-hidden">
                     <NavBarSerction listItems={[
                         { name: "Home", route: "/dashboard", icon: <FiHome className="app__sidebar-icon" /> },
-                        { name: "Jobs", route: "/dashboard/findwork", icon: <FiPieChart className="app__sidebar-icon" /> },
-                        { name: "Job Management", route: "/dashboard/job/123", icon: <FiPieChart className="app__sidebar-icon" /> },
-                        { name: "Courses", route: "/dashboard/courses", icon: <FiShoppingCart className="app__sidebar-icon" /> },
-                        { name: "Terms", route: "/dashboard/kudoz", icon: <FiBookOpen className="app__sidebar-icon" /> },
-                        { name: "Blue Board", route: "/dashboard/blueboard", icon: <FiThumbsUp className="app__sidebar-icon" /> },
-                        { name: "ProZ*Pay", route: "/dashboard/kudoz", icon: <FiMessageCircle className="app__sidebar-icon" /> }
+                        { name: "Jobs", route: "/dashboard/findwork", icon: <FiList className="app__sidebar-icon" /> },
+                        { name: "Job Management", route: "/dashboard/job/123", icon: <FiFolder className="app__sidebar-icon" /> },
+                        { name: "Courses", route: "/dashboard/courses", icon: <BiBookAdd className="app__sidebar-icon" /> }
                     ]}
                         id={"sideBarNav"} />
                     <NavBarSerction listItems={[
-                        { name: "Interpret", route: "/marketplace/interpreting", icon: <FiHome className="app__sidebar-icon" /> },
-                        { name: "Donate words", route: "/marketplace/donate", icon: <FiPieChart className="app__sidebar-icon" /> },
-                        { name: "Translate", route: "/marketplace/translate", icon: <FiShoppingCart className="app__sidebar-icon" /> },
-                        { name: "Subtitle", route: "/marketplace/subtitle", icon: <FiBookOpen className="app__sidebar-icon" /> },
+                        { name: "My Catalog", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Suppliers", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Retailers", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Manufacturers", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Marketplace"
-                        showMore={true}
+                        showMore={false}
+                    />
+                    <NavBarSerction listItems={[
+                        { name: "Transport", route: "/transport", icon: <BsTruck className="app__sidebar-icon" /> },
+                        { name: "Storage", route: "/storage", icon: <BiBuilding className="app__sidebar-icon" /> }
+                    ]}
+                        sectionTitle="Cargo Handling"
+                        showMore={false}
+                    />
+                    <NavBarSerction listItems={[
+                        { name: "Teams", route: "/teams", icon: <FiUsers className="app__sidebar-icon" /> },
+                        { name: "Contacts", route: "/contacts", icon: <AiOutlineContacts className="app__sidebar-icon" /> },
+                        { name: "Businesses", route: "/dashboard/businesses", icon: <GoOrganization className="app__sidebar-icon" /> }
+                    ]}
+                        sectionTitle="Team"
+                        showMore={false}
                     />
                     <NavBarSerction listItems={[
                         { name: "Forums", route: "/networking/forum", icon: <FiHome className="app__sidebar-icon" /> },
@@ -46,9 +62,9 @@ const Navbar = () => {
                         sectionTitle="Networking"
                     />
                     <NavBarSerction listItems={[
+                        { name: "Wallet", route: "/wallet", icon: <BiWallet className="app__sidebar-icon" /> },
                         { name: "Invoicing", route: "/tools/invoicing", icon: <FiHome className="app__sidebar-icon" /> },
                         { name: "Widgets", route: "/tools/widgets", icon: <FiPieChart className="app__sidebar-icon" /> },
-                        { name: "CafeTran", route: "/tools/cafetran", icon: <FiShoppingCart className="app__sidebar-icon" /> },
                         { name: "Community Rates", route: "/tools/community-rates", icon: <FiBookOpen className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Tools"

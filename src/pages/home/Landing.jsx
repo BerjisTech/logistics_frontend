@@ -3,10 +3,7 @@ import { FiKey } from 'react-icons/fi'
 import { Spacer, Partner, MembershipModel, Integrations, SourceTargetSearch, ClearStrikeThrough } from '../../components'
 import { Button } from 'react-bootstrap'
 import { BiBookAlt, BiBriefcase, BiLaptop, BiTargetLock, BiUserPin } from 'react-icons/bi'
-import { GiBullseye, GiChatBubble, GiFilmProjector, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
-import ServicesCards from '../../components/extra_ui_tools/ServicesCards'
-import { randomColor } from '../../components/Helpers'
-import { TypeAnimation } from 'react-type-animation'
+import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
 
 const Landing = () => {
   return (
