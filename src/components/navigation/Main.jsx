@@ -21,11 +21,9 @@ import {
   , Billing
   , Businesses
   , Business
-  , UserProfile
   , Hire
   , Jobs
   , FreelancerProfile
-  , BusinessProfile
   , Events
   , JobManagement
   , Job,
@@ -59,7 +57,7 @@ const Main = () => {
       <Route path="/jobs/*" element={<Jobs />} />
       <Route path="/courses/*" element={<Courses />} />
       {/* Dashboard links */}
-      <Route path="/dashboard/*" element={<Dashboard />} />
+      <Route path="/dashboard/*" element={<NotFound />} />
       <Route path="/dashboard/courses/*" element={<Courses />} />
       <Route path="/dashboard/jobs/*" element={<JobManagement />} />
       <Route path="/dashboard/job/:job_id" element={<Job />} />
