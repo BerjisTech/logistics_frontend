@@ -1,6 +1,5 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import Blueboards from '../blueboard/Blueboards'
 import { FreelancerFilterForm } from '../hire/Freelancer'
 
 export function KudozFilterForm() {
@@ -15,15 +14,6 @@ export function BusinessFilterForm() {
     return (
         <div>
             <h1>BusinessFilterForm</h1>
-        </div>
-    )
-}
-
-export function BlueboardFilterForm() {
-    return (
-        <div>
-            <h1>BlueboardFilterForm</h1>
-            <Blueboards />
         </div>
     )
 }
@@ -43,7 +33,6 @@ const LeftSideBars = () => {
         'default': <EmptySideBar />,
         'kudoz': <KudozFilterForm />,
         'business': <BusinessFilterForm />,
-        'blueboard': <BlueboardFilterForm />,
         'freelancers': <FreelancerFilterForm />
     }
 

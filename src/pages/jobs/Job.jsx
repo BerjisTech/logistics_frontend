@@ -222,22 +222,22 @@ const JobPayments = () => {
   const payments = [
     { id: 1, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'paid', method: 'paypal' },
     { id: 2, name: 'John Doe', amount: 100, date: '2021-01-17', status: 'paid', method: 'wise.com' },
-    { id: 3, name: 'John Doe', amount: 100, date: '2021-02-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 4, name: 'John Doe', amount: 100, date: '2021-02-09', status: 'unpaid', method: 'ProzPay' },
-    { id: 5, name: 'John Doe', amount: 100, date: '2021-02-10', status: 'unpaid', method: 'ProzPay' },
-    { id: 6, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 7, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 8, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 9, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 10, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 11, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 12, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 13, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 14, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 15, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 16, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 17, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
-    { id: 18, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' }
+    { id: 3, name: 'John Doe', amount: 100, date: '2021-02-01', status: 'unpaid', method: 'Prycely' },
+    { id: 4, name: 'John Doe', amount: 100, date: '2021-02-09', status: 'unpaid', method: 'Prycely' },
+    { id: 5, name: 'John Doe', amount: 100, date: '2021-02-10', status: 'unpaid', method: 'Prycely' },
+    { id: 6, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 7, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 8, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 9, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 10, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 11, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 12, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 13, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 14, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 15, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 16, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 17, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' },
+    { id: 18, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'Prycely' }
   ]
 
   return (

@@ -3,7 +3,7 @@ import { FiSettings, FiHome, FiBookOpen, FiPieChart, FiUsers, FiHelpCircle, FiLi
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import NavBarSerction from './NavBarSection'
-import { BiBookAdd, BiBuilding, BiWallet } from 'react-icons/bi'
+import { BiBookAdd, BiBuilding, BiCar, BiWallet } from 'react-icons/bi'
 import { BsTruck } from 'react-icons/bs'
 import { AiOutlineContacts } from 'react-icons/ai'
 import { GoOrganization } from 'react-icons/go'
@@ -30,24 +30,25 @@ const Navbar = () => {
                     ]}
                         id={"sideBarNav"} />
                     <NavBarSerction listItems={[
-                        { name: "My Catalog", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
-                        { name: "Suppliers", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
-                        { name: "Retailers", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
-                        { name: "Manufacturers", route: "/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "My Catalog", route: "/dashboard/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Suppliers", route: "/dashboard/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Retailers", route: "/dashboard/catalog", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Manufacturers", route: "/dashboard/catalog", icon: <FiHome className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Marketplace"
                         showMore={false}
                     />
                     <NavBarSerction listItems={[
-                        { name: "Transport", route: "/transport", icon: <BsTruck className="app__sidebar-icon" /> },
-                        { name: "Storage", route: "/storage", icon: <BiBuilding className="app__sidebar-icon" /> }
+                        { name: "Transport", route: "/dashboard/transport", icon: <BsTruck className="app__sidebar-icon" /> },
+                        { name: "Drivers", route: "/dashboard/drivers", icon: <BiCar className="app__sidebar-icon" /> },
+                        { name: "Storage", route: "/dashboard/storage", icon: <BiBuilding className="app__sidebar-icon" /> }
                     ]}
                         sectionTitle="Cargo Handling"
                         showMore={false}
                     />
                     <NavBarSerction listItems={[
-                        { name: "Teams", route: "/teams", icon: <FiUsers className="app__sidebar-icon" /> },
-                        { name: "Contacts", route: "/contacts", icon: <AiOutlineContacts className="app__sidebar-icon" /> },
+                        { name: "Teams", route: "/dashboard/teams", icon: <FiUsers className="app__sidebar-icon" /> },
+                        { name: "Contacts", route: "/dashboard/contacts", icon: <AiOutlineContacts className="app__sidebar-icon" /> },
                         { name: "Businesses", route: "/dashboard/businesses", icon: <GoOrganization className="app__sidebar-icon" /> }
                     ]}
                         sectionTitle="Team"
@@ -62,7 +63,7 @@ const Navbar = () => {
                         sectionTitle="Networking"
                     />
                     <NavBarSerction listItems={[
-                        { name: "Wallet", route: "/wallet", icon: <BiWallet className="app__sidebar-icon" /> },
+                        { name: "Wallet", route: "/dashboard/wallet", icon: <BiWallet className="app__sidebar-icon" /> },
                         { name: "Invoicing", route: "/tools/invoicing", icon: <FiHome className="app__sidebar-icon" /> },
                         { name: "Widgets", route: "/tools/widgets", icon: <FiPieChart className="app__sidebar-icon" /> },
                         { name: "Community Rates", route: "/tools/community-rates", icon: <FiBookOpen className="app__sidebar-icon" /> },

@@ -56,7 +56,6 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">Member Activities</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/wiwo">#Wiwo</a></li>
                                         <li><a className="dropdown-item" href="/training">Training</a></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
@@ -83,7 +82,7 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">Tools</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/prozpay">ProZPay&trade;</a></li>
+                                        <li><a className="dropdown-item" href="/prozpay">Prycely&trade;</a></li>
                                         <li><a className="dropdown-item" href="https://tm-town.com" target="_BLANK" rel="noreferrer">TM Town</a></li>
                                         <li><a className="dropdown-item" href="https://protemos.com" target="_BLANK" rel="noreferrer">Protemos</a></li>
                                     </ul>

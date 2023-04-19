@@ -48,12 +48,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          {/* ProZPay */}
+          {/* Prycely */}
           <div className='rounded-3 shadow bg-[#DFEDEB] border-1 border-[#2E6969] p-2 mt-3'>
             <div className='d-flex align-items-center justify-content-center'>
               <img src='/images/money-bag.jpg' alt='open-book' className='border-1 w-[50px] h-[50px] rounded-full img-fluid' />
               <span className='flex-fill fw-bold ps-3 text-[#186362]'>Manage your invoices and payments with ease</span>
-              <a href='/dashboard/prozpay' className='bg-[#186362] py-2 px-3 rounded-3 text-white hover:bg-[#2E6969]'>Visit ProZPay&trade;</a>
+              <a href='/dashboard/prozpay' className='bg-[#186362] py-2 px-3 rounded-3 text-white hover:bg-[#2E6969]'>Visit Prycely&trade;</a>
             </div>
           </div>
           {/* Extra cards */}
@@ -66,10 +66,10 @@ const Dashboard = () => {
               <div className='col-sm-6 m-0 border-1 p-3'>
                 <div className='d-flex align-items-start justify-content-start flex-col gap-3'>
                   <span className='p-3 bg-red-200 rounded-full'><GiWallet size={50} className="text-red-800 d-flex align-items-center justify-content-center" /></span>
-                  <span className='fw-bold'>ProzPay&trade;</span>
+                  <span className='fw-bold'>Prycely&trade;</span>
                   <span className='text-gray-500'>Manage all your funds in one place. Organize your invoices, handle disputes and send notiofications to your clients</span>
                   <span className='d-flex align-items-center justify-content-center gap-2'>
-                    <a href="/dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit ProzPay</a>
+                    <a href="/dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit Prycely</a>
                     <a href="/dashboard/help/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
                     <AiOutlineEllipsis className='fs-3 text-blue-800' />
                   </span>
@@ -105,7 +105,7 @@ const Dashboard = () => {
                   <span className='fw-bold'>Community</span>
                   <span className='text-gray-500'>Interact with the community to get the latest trends and news from other translators and intepreters.</span>
                   <span className='d-flex align-items-center justify-content-center gap-2'>
-                    <a href="/dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit ProzPay</a>
+                    <a href="/dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit Prycely</a>
                     <a href="/dashboard/prozpay/help" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
                     <AiOutlineEllipsis className='fs-3 text-blue-800' />
                   </span>

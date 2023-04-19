@@ -1,17 +1,18 @@
-export { default as Landing } from './home/Landing'
-
 // Dashboard
 export { default as Dashboard } from './dashboard/Dashboard'
 export { default as Catalog } from './dashboard/catalog/Catalog'
 export { default as Contacts } from './dashboard/contacts/Contacts'
 export { default as Storage } from './dashboard/storage/Storage'
 export { default as Transport } from './dashboard/transport/Transport'
+export { default as Drivers } from './dashboard/transport/Drivers'
 export { default as Wallet } from './dashboard/wallet/Wallet'
 export { default as Teams } from './dashboard/teams/Teams'
 export { default as Team } from './dashboard/teams/Team'
 
 // Landing & user facing files
 export { default as Signup } from './auth/Signup';
+export { default as Landing } from './home/Landing'
+export { default as NotFound } from './home/NotFound'
 
 // Dashboard files
 export { default as Applications } from './applications/Applications'
@@ -25,12 +26,6 @@ export { default as Billing } from './settings/Billing'
 export { default as Businesses } from './business/businesses'
 export { default as Business } from './business/business'
 
-// Blueboards
-export { default as BlueboardList } from './blueboards/BlueboardList'
-
-// Feed
-export { default as Feeds } from './feeds/Feeds'
-
 // Jobs
 export { default as Jobs } from './jobs/Jobs'
 export { default as Hire } from './jobs/Hire'
@@ -41,6 +36,5 @@ export { default as Job } from './jobs/Job'
 export { default as Events } from './events/Events'
 
 // Profile
-export { default as UserProfile } from './profiles/UserProfile'
 export { default as BusinessProfile } from './profiles/BusinessProfile'
 export { default as FreelancerProfile } from './profiles/FreelancerProfile'

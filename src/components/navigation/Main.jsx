@@ -21,7 +21,6 @@ import {
   , Billing
   , Businesses
   , Business
-  , BlueboardList
   , UserProfile
   , Hire
   , Jobs
@@ -29,7 +28,9 @@ import {
   , BusinessProfile
   , Events
   , JobManagement
-  , Job
+  , Job,
+  NotFound,
+  Drivers
 } from '../../pages';
 // Import pages here
 // Import { Page1, Page2, Page3, Page4 } from './pages';
@@ -52,12 +53,9 @@ const Main = () => {
       <Route path="/settings/*" element={<Settings />} />
       <Route path="/billing/*" element={<Billing />} />
       <Route path="/businesses/*" element={<Businesses />} />
-      <Route path="/business/:business_id" element={<Business />} />
-      <Route path="/blueboards" element={<BlueboardList />} />
-      <Route path="/profile/:profile_id" element={<UserProfile />} />
+      <Route path="/b/:business_id" element={<Business />} />
       <Route path="/hire/:translator_type" element={<Hire />} />
-      <Route path="/freelancer/:freelancer_id" element={<FreelancerProfile />} />
-      <Route path="/business/:business_id" element={<BusinessProfile />} />
+      <Route path="/u/:profile_id" element={<FreelancerProfile />} />
       <Route path="/jobs/*" element={<Jobs />} />
       <Route path="/courses/*" element={<Courses />} />
       {/* Dashboard links */}
@@ -70,16 +68,22 @@ const Main = () => {
       <Route path="/dashboard/settings/*" element={<Settings />} />
       <Route path="/dashboard/businesses/*" element={<Businesses />} />
       <Route path="/dashboard/business/:business_id" element={<Business />} />
+      <Route path="/dashboard/find-work/*" element={<FindWork />} />
+      <Route path="/dashboard/find_work/*" element={<FindWork />} />
+      <Route path="/dashboard/findwork/*" element={<FindWork />} />
 
       <Route path='/' element={<Landing />} />
       <Route path='/dashboard' element={<Dashboard />} />
-      <Route path='/catalog' element={<Catalog />} />
-      <Route path='/contacts' element={<Contacts />} />
-      <Route path='/storage' element={<Storage />} />
-      <Route path='/transport' element={<Transport />} />
-      <Route path='/wallet' element={<Wallet />} />
-      <Route path='/teams' element={<Teams />} />
-      <Route path='/team/:team_id' element={<Team />} />
+      <Route path='/dashboard/catalog' element={<Catalog />} />
+      <Route path='/dashboard/contacts' element={<Contacts />} />
+      <Route path='/dashboard/storage' element={<Storage />} />
+      <Route path='/dashboard/transport' element={<Transport />} />
+      <Route path='/dashboard/wallet' element={<Wallet />} />
+      <Route path='/dashboard/teams' element={<Teams />} />
+      <Route path='/dashboard/team/:team_id' element={<Team />} />
+      <Route path='/dashboard/drivers' element={<Drivers />} />
+
+      <Route path='*' element={<NotFound />} />
 
     </Routes>
   )
