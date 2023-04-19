@@ -14,7 +14,7 @@ const ExpandedComponent = ({ data }) => {
           <span>Answerer: <a href={data.translator_ul}>{data.translator}</a></span>
           <span>Source: <a href={data.source_url}>{data.source}</a></span>
           <span>Fields: {data.fields}</span>
-          <span><a href={`/kudoz/term/${data.term}`}>View full discussion</a></span>
+          <span><a href={`/#`}>View full discussion</a></span>
         </div>
       </div>
     </>

@@ -20,7 +20,7 @@ import { useState } from 'react';
 import { LimitedWordTextarea } from '../../components/general_ui_components/Reusables';
 import { GiPaperClip } from 'react-icons/gi';
 
-const FreelancerProfile = () => {
+const UserProfile = () => {
     const [showQuoteModal, setShowQuoteModal] = useState(false);
     const [category, setCategory] = useState('')
     const [sub_category, setSubCategory] = useState('')
@@ -84,7 +84,7 @@ const FreelancerProfile = () => {
             <div className='bg-[url(https://d1m1s6un1a8qgj.cloudfront.net/static/head-banner.svg)] h-[200px] w-full shadow'></div>
             <div className=''>
                 <div className='d-flex align-items-center justify-content-start px-4 gap-4 flex-wrap'>
-                    <img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt='open-book' className='border-2 border-[#ffffff] mt-[-50px] border-1 w-[150px] h-[150px] rounded-full img-fluid' />
+                    <img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt='open-book' className='border-[#ffffff] mt-[-50px] border-1 w-[150px] h-[150px] rounded-full img-fluid' />
                     <div className='d-flex align-items-start justify-content-between flex-fill flex-wrap wrap'>
                         <div className='d-flex align-items-start justify-content-start flex-col'>
                             <span className='fw-bold text-[30px]'>John Doe</span>
@@ -113,7 +113,7 @@ const FreelancerProfile = () => {
                                         </Modal.Header>
                                         <Modal.Body>
                                             <div className='d-flex align-items-start justify-content-start gap-2 border-bottom-1 py-3'>
-                                                <img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt='open-book' className='border-2 border-[#ffffff] border-1 w-[50px] h-[50px] rounded-full img-fluid' />
+                                                <img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt='open-book' className='border-[#ffffff] border-1 w-[50px] h-[50px] rounded-full img-fluid' />
                                                 <div className='d-flex align-items-start justify-content-between flex-col'>
                                                     <span className='fw-bold'>John  Doe</span>
                                                     <span>Hi, please provide your request details below and I'll get back to you.</span>
@@ -278,4 +278,4 @@ const FreelancerProfile = () => {
     )
 }
 
-export default FreelancerProfile
+export default UserProfile

@@ -14,7 +14,6 @@ import {
   , Applications
   , Courses
   , FindWork
-  , Kudoz
   , Messages
   , Search
   , Settings
@@ -23,7 +22,7 @@ import {
   , Business
   , Hire
   , Jobs
-  , FreelancerProfile
+  , UserProfile
   , Events
   , JobManagement
   , Job,
@@ -45,7 +44,6 @@ const Main = () => {
       <Route path="/find-work/*" element={<FindWork />} />
       <Route path="/find_work/*" element={<FindWork />} />
       <Route path="/findwork/*" element={<FindWork />} />
-      <Route path="/kudoz/*" element={<Kudoz />} />
       <Route path="/messages/*" element={<Messages />} />
       <Route path="/search/*" element={<Search />} />
       <Route path="/settings/*" element={<Settings />} />
@@ -53,7 +51,8 @@ const Main = () => {
       <Route path="/businesses/*" element={<Businesses />} />
       <Route path="/b/:business_id" element={<Business />} />
       <Route path="/hire/:translator_type" element={<Hire />} />
-      <Route path="/u/:profile_id" element={<FreelancerProfile />} />
+      <Route path="/u/:profile_id" element={<UserProfile />} />
+      <Route path="/profile/:profile_id" element={<UserProfile />} />
       <Route path="/jobs/*" element={<Jobs />} />
       <Route path="/courses/*" element={<Courses />} />
       {/* Dashboard links */}

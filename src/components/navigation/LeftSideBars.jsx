@@ -2,14 +2,6 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { FreelancerFilterForm } from '../hire/Freelancer'
 
-export function KudozFilterForm() {
-    return (
-        <div>
-            <h1>KudozFilterForm</h1>
-        </div>
-    )
-}
-
 export function BusinessFilterForm() {
     return (
         <div>
@@ -31,7 +23,6 @@ const LeftSideBars = () => {
     let active_sidebar = location.pathname.split('/').reverse()[0]
     const left_sidebars = {
         'default': <EmptySideBar />,
-        'kudoz': <KudozFilterForm />,
         'business': <BusinessFilterForm />,
         'freelancers': <FreelancerFilterForm />
     }

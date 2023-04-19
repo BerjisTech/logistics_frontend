@@ -46,16 +46,6 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/kudoz" className="secondary-navigation__link">
-                            <span className="secondary-navigation__icon">
-                                <i className="fas fa-thumbs-up"></i>
-                            </span>
-                            <span className="secondary-navigation__text">
-                                KudoZ
-                            </span>
-                        </a>
-                    </div>
-                    <div className="secondary-navigation__item">
                         <a href="/dashboard/teams" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-users"></i>
@@ -108,10 +98,6 @@ const SecondaryNavigation = ({ primary_navigation }) => {
         case 'courses':
             return (
                 <div className="secondary-navigation">Courses</div>
-            )
-        case 'kudoz':
-            return (
-                <div className="secondary-navigation">KudoZ</div>
             )
         case 'teams':
             return (
