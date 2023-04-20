@@ -38,3 +38,6 @@ export { default as HeaderSearch } from "./search/HeaderSearch"
 // Businesses
 export { default as BusinessList } from "./businesses/BusinessList"
 export { default as SingleBusiness } from "./businesses/SingleBusiness"
+
+// Dashboard
+export { default as CatalogItem } from "./dashboard/Catalog/CatalogItem"

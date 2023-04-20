@@ -1,9 +1,38 @@
-import React from 'react'
+import React from 'react';
+import { CatalogItem } from '../../../components';
+import { faker } from '@faker-js/faker';
 
 const Catalog = () => {
-  return (
-    <div>Catalog</div>
-  )
-}
+  const renderCatalogItems = () => {
+    const catalogItems = [];
 
-export default Catalog
+    for (let index = 0; index < 10; index++) {
+      catalogItems.push(
+        {
+          item: faker.commerce.productName(),
+          name: faker.commerce.productName(),
+          category: index % 2 === 0 ? 'product' : 'product',
+          status: 'John Doe',
+          inventory: 60,
+          vendor: 'self',
+          supplier: 'self',
+          manufacturer: 'Mfg Co LTD',
+          price: 200,
+          image: `https://picsum.photos/500/300?random=${index}`
+        }
+
+      );
+    }
+
+    return catalogItems;
+  };
+
+  return (
+    <div>
+      Catalog
+      <CatalogItem list_type={'card'} catalog_list={renderCatalogItems()} />
+    </div>
+  );
+};
+
+export default Catalog;
