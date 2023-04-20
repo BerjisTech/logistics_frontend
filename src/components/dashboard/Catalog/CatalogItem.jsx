@@ -25,9 +25,9 @@ export const ProductRow = () => {
     );
 };
 
-export const ProductCard = ({ product, card_width = '300px' }) => {
+export const ProductCard = ({ product, card_width = '300px', flex_override = 'column' }) => {
     return (
-        <div className={`w-[${card_width}]`}>
+        <div className={`w-[${card_width}] flex flex[${flex_override}]`}>
             <img src={product.image} alt="business logo" className='h-[full] w-[full] rounded-2' />
             <span>{product.name}</span>
         </div>
@@ -37,7 +37,7 @@ export const ProductCard = ({ product, card_width = '300px' }) => {
 export const CatalogCards = ({ catalog_list }) => {
     return (
         <div className='pt-3 flex gap-3 align-items-start justify-content-center flex-row flex-wrap w-full h-auto bg-red-100'>
-            {catalog_list.map(item => item.category === 'product' ? <ProductCard product = {item} card_width={'30%'} /> : <ServiceCard />)}
+            {catalog_list.map(item => item.category === 'product' ? <ProductCard product={item} card_width={'30%'} /> : <ServiceCard />)}
         </div>
     );
 }
@@ -48,7 +48,16 @@ export const CatalogRows = ({ catalog_list }) => {
     const columns = [
         {
             name: 'Item',
-            selector: row => row.item,
+            cell: row => (
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <img
+                        src={row.image}
+                        alt={row.item}
+                        style={{ width: '50px', height: '50px', marginRight: '10px' }}
+                    />
+                    {row.item}
+                </div>
+            ),
             sortable: true
         },
         {
@@ -105,7 +114,7 @@ export const CatalogRows = ({ catalog_list }) => {
             }}
             selectableRows
             expandableRows
-            expandableRowsComponent={({ data: row }) => row.category === 'product' ? <ProductCard product={row} /> : <ServiceCard />}
+            expandableRowsComponent={({ data: row }) => row.category === 'product' ? <ProductCard product={row} card_width={'100px'} flex_override={'row'} /> : <ServiceCard />}
         />
     );
 }

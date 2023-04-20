@@ -6,7 +6,7 @@ const Catalog = () => {
   const renderCatalogItems = () => {
     const catalogItems = [];
 
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < 100; index++) {
       catalogItems.push(
         {
           item: faker.commerce.productName(),
@@ -30,7 +30,7 @@ const Catalog = () => {
   return (
     <div>
       Catalog
-      <CatalogItem list_type={'card'} catalog_list={renderCatalogItems()} />
+      <CatalogItem list_type={'row'} catalog_list={renderCatalogItems()} />
     </div>
   );
 };
