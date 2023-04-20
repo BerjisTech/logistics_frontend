@@ -25,19 +25,19 @@ export const ProductRow = () => {
     );
 };
 
-export const ProductCard = ({ product, card_width = '300px', flex_override = 'column' }) => {
+export const ProductCard = ({ product, card_width = '200px', flex_override = 'column' }) => {
     return (
-        <div className={`w-[${card_width}] flex flex[${flex_override}]`}>
-            <img src={product.image} alt="business logo" className='h-[full] w-[full] rounded-2' />
+        <div className={`w-[${card_width}] flex flex-${flex_override}`}>
+            <img src={product.image} alt="business logo" className='h-full w-full rounded-2' />
             <span>{product.name}</span>
         </div>
     );
 };
 
-export const CatalogCards = ({ catalog_list }) => {
+export const CatalogCards = ({ catalog_list, card_width = '30%' }) => {
     return (
-        <div className='pt-3 flex gap-3 align-items-start justify-content-center flex-row flex-wrap w-full h-auto bg-red-100'>
-            {catalog_list.map(item => item.category === 'product' ? <ProductCard product={item} card_width={'30%'} /> : <ServiceCard />)}
+        <div className='pt-3 flex gap-3 align-items-start justify-content-center flex-row flex-wrap w-full h-auto'>
+            {catalog_list.map(item => item.category === 'product' ? <ProductCard product={item} card_width={card_width} /> : <ServiceCard />)}
         </div>
     );
 }
@@ -119,12 +119,12 @@ export const CatalogRows = ({ catalog_list }) => {
     );
 }
 
-const CatalogItem = ({ list_type, catalog_list }) => {
+const CatalogItem = ({ list_type, catalog_list, card_width }) => {
     return (
         <div>
             {list_type === 'row'
                 ? <CatalogRows catalog_list={catalog_list} />
-                : <CatalogCards catalog_list={catalog_list} />}
+                : <CatalogCards catalog_list={catalog_list} card_width={card_width} />}
         </div>
     );
 };

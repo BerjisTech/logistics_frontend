@@ -1,9 +1,47 @@
 import React from 'react'
 import { FiKey } from 'react-icons/fi'
-import { Spacer, Partner, MembershipModel, Integrations, SourceTargetSearch, ClearStrikeThrough } from '../../components'
+import { Spacer, Partner, MembershipModel, Integrations, SourceTargetSearch, ClearStrikeThrough, CatalogItem } from '../../components'
 import { Button } from 'react-bootstrap'
 import { BiBookAlt, BiBriefcase, BiLaptop, BiTargetLock, BiUserPin } from 'react-icons/bi'
 import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
+import { faker } from '@faker-js/faker';
+
+export const Products = () => {
+  const renderCatalogItems = () => {
+    const catalogItems = [];
+
+    for (let index = 0; index < 6; index++) {
+      catalogItems.push(
+        {
+          item: faker.commerce.productName(),
+          name: faker.commerce.productName(),
+          category: 'product',
+          status: faker.commerce.status,
+          inventory: 60,
+          vendor: 'self',
+          supplier: 'self',
+          manufacturer: 'Mfg Co LTD',
+          price: 200,
+          image: `https://picsum.photos/500/300?random=${index}`
+        }
+
+      );
+    }
+
+    return catalogItems;
+  };
+
+  return (
+    <div className='flex items-center content-center flex-col p-4'>
+      <div className="row m-0 p-0 w-full">
+        <div className="col-md-4"></div>
+        <div className="col-md-4"><ClearStrikeThrough striked_text={`PRODUCTS`} font_size="12px" text_color="#3A727F" /></div>
+        <div className="col-md-4"></div>
+      </div>
+      <CatalogItem list_type={'card'} card_width={'50%'} catalog_list={renderCatalogItems()} />
+    </div>
+  );
+};
 
 const Landing = () => {
   return (
@@ -12,7 +50,7 @@ const Landing = () => {
         <div className="col-md-4"></div>
         <div className="col-md-4">
           <Spacer spacing='[4, 0, 0, 0]' />
-          <ClearStrikeThrough striked_text={`WE ARE SO MUCH MORE THAN A FREELANCE SITE`} font_size="12px" text_color="#3A727F" />
+          <ClearStrikeThrough className="w-[70%]" striked_text={`WE ARE SO MUCH MORE THAN A FREELANCE SITE`} font_size={"12px"} text_color={"#3A727F"} />
           <div className="text-4xl font-[800] text-center mt-5">
             Online Community and Workplace<br />
             for <span className="text-[#A1DDCB]">Language Professionals</span>
@@ -61,6 +99,7 @@ const Landing = () => {
           </div>
         </div >
       </div>
+      <Products />
       <div className="py-[150px] bg-[#F4F6FA]">
         <div className="row">
           <div className="col-md-3"></div>

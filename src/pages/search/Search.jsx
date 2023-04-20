@@ -188,6 +188,8 @@ const Search = () => {
     <>
       <DataTable
         pagination
+        paginationPerPage={50}
+        paginationRowsPerPageOptions={[10,20,50,100,500]}
         columns={columns}
         data={data}
         selectableRows

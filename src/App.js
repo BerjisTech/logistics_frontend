@@ -75,11 +75,11 @@ const LandingPagesLayout = () => {
   }
 
   const right_side_bar_pages = ['/courses', '/about/', '/contact/']
-  const left_side_bar_pages = ['/employer/', '/about/', '/contact/']
+  const left_side_bar_pages = ['/employer/', '/about/', '/contact/', '/search']
   const two_side_bar_pages = ['/profile/', '/freelancer/', '/hire/', '/businesses', '/jobs', '/job/', '/profile/']
 
   let location = window.location.href
-  let page = 'two-side-bars'
+  let page = 'no-side-bars'
   if (right_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {
     page = 'right-side-bar'
   } else if (left_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {

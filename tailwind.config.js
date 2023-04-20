@@ -32,9 +32,11 @@ module.exports = {
                 1000: '1000px',
                 1200: '1200px',
                 1400: '1400px',
+                'full': '100%',
             },
             height: {
                 80: '80px',
+                'full': '100%',
             },
             minHeight: {
                 590: '590px',
